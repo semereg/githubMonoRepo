@@ -18,4 +18,4 @@ jobs:
           sh chmod +x ./.github/scripts/build.sh
           sh chmod +x ./.github/scripts/github.sh
       - name: Run set permission on file
-          run: ./.github/scripts/build.sh
+        run: ./.github/scripts/build.sh
