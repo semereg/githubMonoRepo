@@ -32,4 +32,4 @@ jobs:
       - name: Build mule-sys-api
         working-directory: ./apps/mule-sys-api
         run: |
-        echo "some change ...."
+          echo "some change ...."
