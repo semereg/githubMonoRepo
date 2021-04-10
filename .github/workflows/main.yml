@@ -16,4 +16,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.token }}
         run: chmod +x ./.github/scripts/build.sh
       - name: Run set permission on file
+        run: chmod +x ./.github/scripts/github.sh
+      - name: Run main build runner
         run: ./.github/scripts/build.sh
