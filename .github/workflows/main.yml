@@ -14,8 +14,6 @@ jobs:
         env:
           CI_TOOL: github
           GITHUB_TOKEN: ${{ secrets.token }}
-        run: |
-          sh "chmod 775 ./.github/scripts/build.sh"
-          sh "chmod 775 ./.github/scripts/github.sh"
+        run: chmod +x ./.github/scripts/build.sh
       - name: Run set permission on file
         run: ./.github/scripts/build.sh
