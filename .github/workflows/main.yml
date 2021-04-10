@@ -10,8 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: Run main build runner
+      - name: Run set permission on file
         env:
           CI_TOOL: github
           GITHUB_TOKEN: ${{ secrets.token }}
-        run: ./.github/scripts/build.sh
+        run: |
+          sh chmod +x ./.github/scripts/build.sh
+          sh chmod +x ./.github/scripts/github.sh
+      - name: Run set permission on file
+          run: ./.github/scripts/build.sh
