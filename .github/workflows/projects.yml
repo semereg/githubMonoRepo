@@ -4,20 +4,32 @@ on: repository_dispatch
 
 jobs:
 
-  server:
-    if: github.event.client_payload.job == 'server'
+  mule-exp-api:
+    if: github.event.client_payload.job == 'mule-exp-api'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build Server
-        working-directory: ./apps/server
-        run: ./gradlew clean build
+      - name: Build mule-exp-api
+        working-directory: ./apps/mule-exp-api
+        run: |
+          echo "some change ...."
 
-  client:
-    if: github.event.client_payload.job == 'client'
+  mule-proc-api:
+    if: github.event.client_payload.job == 'mule-proc-api'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build Client
-        working-directory: ./apps/client
-        run: ./gradlew clean build
+      - name: Build mule-proc-api
+        working-directory: ./apps/mule-proc-api
+        run: |
+          echo "some change ...."
+
+  mule-sys-api:
+    if: github.event.client_payload.job == 'mule-sys-api'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build mule-sys-api
+        working-directory: ./apps/mule-sys-api
+        run: |
+        echo "some change ...."
