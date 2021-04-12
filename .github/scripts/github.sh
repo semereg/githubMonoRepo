@@ -27,7 +27,7 @@ EOM
 
 set -e
 
-GITHUB_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}"
+GITHUB_URL="https://api.github.com/repos/semereg/githubMonoRepo"
 
 # Functions
 
