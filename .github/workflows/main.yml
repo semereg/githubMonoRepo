@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Run set permission on file
-        run: chmod +x ./.github/scripts/build.sh
+        run: chmod +x ./.github/scripts/list-project.sh
       - name: Run set permission on file
         run: chmod +x ./.github/scripts/github.sh
       - name: Run main build runner
