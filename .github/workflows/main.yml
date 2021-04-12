@@ -18,4 +18,4 @@ jobs:
         env:
           CI_TOOL: github
           GITHUB_TOKEN: ${{ secrets.token }}
-        run: ./.github/scripts/build.sh
+        run: ./.github/scripts/list-project.sh

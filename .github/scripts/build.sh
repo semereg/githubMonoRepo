@@ -14,8 +14,8 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Configuration with default values
-: "${CI_TOOL:=github}"
-: "${CI_PLUGIN:=$DIR/${CI_TOOL}.sh}"
+: "${GH_TOOL:=github}"
+: "${CI_PLUGIN:=$DIR/${GH_TOOL}.sh}"
 
 # Resolve commit range for current build
 LAST_SUCCESSFUL_COMMIT=$(${CI_PLUGIN} hash last)
